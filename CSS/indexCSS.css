@@ -60,23 +60,18 @@ body
 
 }
 
-.leftMenu
-{
+.leftMenu { /* Svarta baren till vänster */
     position: relative;
     float: left;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
     width: 350px;
-    opacity: 0.5;
 }
 
-.leftMenu:before {
-    
-}
-
-.title
+.title /* My name showing up */
 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     color: white;
     font-size: 50px;
     opacity: 1;
@@ -86,10 +81,10 @@ body
     top: 12px;
 }
 
-.projects
+/*.projects
 {
     background-color: white;
-    width: 340px; /* Width = 350-padding*2 */
+    width: 340px; /* Width = 350-padding*2 *-/
     position: absolute;
     top: 90px;
     opacity: 0.5;
@@ -104,4 +99,73 @@ body
     font-family: Arial;
     font-size: 20px;
     font-weight: bold;
+}*/
+
+.pp /* Profile Picture */
+{
+    border-radius: 50%;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+
+    left: 50%;
+    transform: translate(-50%);
+    top: 94px;
+}
+
+.quickInfo /* Quick information about me */
+{
+    line-height: 150%;
+    /*border: 1px solid red;*/
+    text-align: center;
+    font-family: 'Inconsolata', monospace; 
+    color: white;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 230px;
+    transform: translate(-50%);
+}
+
+.quickInfo .bold /* f.in. name, age, occupation */
+{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.randomLinks
+{
+    /*border: 1px solid red;*/
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+}
+
+.randomLinks #github
+{
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 20%;
+    /*border: 1px solid red;*/
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    transition: 0.15s;
+}
+
+.randomLinks #github:hover
+{
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.2s;
 }
