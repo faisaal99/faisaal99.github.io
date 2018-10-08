@@ -184,7 +184,11 @@ body
 }
 
 /**************************************************************************/
-
+.underConstr
+{
+    color: red;
+}
+/*********************************/
 .deluxeParkering
 {
     color: white;
@@ -235,6 +239,53 @@ body
 
 /************************************************************************/
 
+.App_UI_UX
+{
+    color: white;
+    text-align: left;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%);
+    text-decoration: none;
+    overflow: hidden;
+
+    font-family: 'Nunito', sans-serif;
+ 
+}
+
+.App_UI_UX #upper
+{
+    background-color: rgba(0,0,0,0.65);
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+
+    transition: 0.15s;
+}
+
+.App_UI_UX #upper:hover
+{
+    background-color: rgba(0,0,0,0.8);
+    transition: 0.2s;
+}
+
+.App_UI_UX #lower
+{
+    background-color: rgba(0,0,0,0.5);
+    padding: 12px;
+    border-radius: 0 0 10px 10px;
+}
+
+.App_UI_UX a
+{
+    color: white;
+    text-decoration: none;
+}
+.App_UI_UX a:hover
+{
+    text-decoration: underline;
+}
 
 
 
