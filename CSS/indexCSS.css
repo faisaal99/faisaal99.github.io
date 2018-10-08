@@ -205,7 +205,7 @@ body
  
 }
 
-.deluxeParkering #upper
+.deluxeParkering .upper
 {
     background-color: rgba(0,0,0,0.65);
     padding: 12px;
@@ -214,13 +214,13 @@ body
     transition: 0.15s;
 }
 
-.deluxeParkering #upper:hover
+.deluxeParkering .upper:hover
 {
     background-color: rgba(0,0,0,0.8);
     transition: 0.2s;
 }
 
-.deluxeParkering #lower
+.deluxeParkering .lower
 {
     background-color: rgba(0,0,0,0.5);
     padding: 12px;
@@ -255,7 +255,7 @@ body
  
 }
 
-.App_UI_UX #upper
+.App_UI_UX .upper
 {
     background-color: rgba(0,0,0,0.65);
     padding: 12px;
@@ -264,13 +264,13 @@ body
     transition: 0.15s;
 }
 
-.App_UI_UX #upper:hover
+.App_UI_UX .upper:hover
 {
     background-color: rgba(0,0,0,0.8);
     transition: 0.2s;
 }
 
-.App_UI_UX #lower
+.App_UI_UX .lower
 {
     background-color: rgba(0,0,0,0.5);
     padding: 12px;
