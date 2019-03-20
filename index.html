@@ -1,25 +1,78 @@
 ﻿<!DOCTYPE html>
 
-<html lang="sv">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Faisal Akhtar · Portfolio</title>
-    <link href="CSS/indexCSS.css" rel="stylesheet" />
+    <link href="indexCSS.css" rel="stylesheet" />
     <link rel="icon" href="images/icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nunito|Raleway" rel="stylesheet">
 
+    <script>
+        //function background() {
+        //    var bg = "url(images/backgroundImage.jpg)";
+        //    document.getElementById("body").style.backgroundImage = bg;
+        //    console.log(document.getElementById("body").style.backgroundImage);
+        //    console.log("changed the background");
+        //}
+
+        function colorChange(theme) {
+            var upperIndex = document.getElementsByClassName("upper");
+            var aIndex= document.getElementsByClassName("aLinks");
+
+            if (theme == 0) {              
+                one = "url(images/backgroundImage1.jpg)";
+                document.getElementById("bg").style.backgroundImage = one;
+                document.getElementById("leftMenu").style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+                document.getElementById("title").style.color = "black";
+                document.getElementById("pp").src = "images/ppIconB.png";
+                document.getElementById("quickInfo").style.color = "black";
+                document.getElementById("gitimg").src = "images/githubB.png";
+                document.getElementById("github").style.backgroundColor = "rgba(0,0,0,0.3)";
+                document.getElementById("projects").style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+                document.getElementById("projects").style.color = "black";
+                document.getElementById("deluxeParkering").style.color = "black";
+                upperIndex[0].style.backgroundColor = "rgba(255, 255, 255, 0.65)";
+                upperIndex[1].style.backgroundColor = "rgba(255, 255, 255, 0.65)";
+                aIndex[0].style.color = "black";
+                aIndex[1].style.color = "black";
+
+            }
+            else if (theme == 1) {
+                var zero = "url(images/backgroundImage.jpg)";
+                document.getElementById("bg").style.backgroundImage = zero; 
+                document.getElementById("leftMenu").style.backgroundColor = "rgba(0, 0, 0, 0.5)";                
+                document.getElementById("title").style.color = "white";
+                document.getElementById("pp").src = "images/ppIcon.png";
+                document.getElementById("quickInfo").style.color = "white";
+                document.getElementById("gitimg").src = "images/github.png";
+                document.getElementById("github").style.backgroundColor = "";
+                document.getElementById("projects").style.backgroundColor = "";
+                document.getElementById("projects").style.color = "";
+                document.getElementById("deluxeParkering").style.color = "";
+                upperIndex[0].style.backgroundColor = "";
+                upperIndex[1].style.backgroundColor = "";
+                aIndex[0].style.color = "";
+                aIndex[1].style.color = "";
+            }
+        }
+
+    </script>
+
+
 </head>
 
-<body style="background-image: url(images/backgroundImage.jpg);">
+<body onload="checkW()" id="body">
+        <div id="bg"></div>
 
-        <div class="leftMenu">
-            <p class="title">Faisal A.</p>
+        <div id="leftMenu">
+            <p id="title">Faisal A.</p>
 
             <!-- Profile Picture || Change source to actual picture later on -->
-            <img class="pp" src="images/ppIcon.png" alt="Profile Picture" title="N/A"/>
+            <img id="pp" src="images/ppIcon.png" alt="Profile Picture" title="N/A"/>
 
-            <div class="quickInfo">
+            <div id="quickInfo">
 
                 <span class="bold">Full Name</span>: &nbsp;Faisal Akhtar <br />
                 <span class="bold">Age</span>: &nbsp;19 <br />
@@ -34,27 +87,41 @@
 
 
                 <a id="github" href="https://github.com/faisaal99" title="Github Page" target="_blank">
-                    <img src="images/github.png" alt="github icon" width="40" height="40" />
+                    <img id="gitimg" src="images/github.png" alt="github icon" width="40" height="40" />
                 </a>
 
             </div>
-
         </div>
-
+        
 
         <!-- Hela höger sida av sidan.-->
     <!--***********************************************************************************-->
 
         <div class="rightSide" style="text-align: center;">
 
-            
-            <div class="projects">
+            <input type="image" src="images/darkSmall.svg" id="themeButton" onclick="changeTheme()" title="Change Theme"/>
+
+            <script>
+                function changeTheme() {
+
+                    if (source == "file:///C:/Users/Faisal/Documents/Personlig%20Sida%20GIT/images/darkSmall.svg") {
+                        colorChange(0);
+                        document.getElementById("themeButton").src = "file:///C:/Users/Faisal/Documents/Personlig%20Sida%20GIT/images/light.svg";
+                    }
+                    else if (source == "file:///C:/Users/Faisal/Documents/Personlig%20Sida%20GIT/images/light.svg") {
+                        colorChange(1);
+                        document.getElementById("themeButton").src = "file:///C:/Users/Faisal/Documents/Personlig%20Sida%20GIT/images/darkSmall.svg";
+                    }                    
+                }
+            </script>
+
+            <div id="projects">
                 Projects:
             </div>
 
-            <div class="deluxeParkering">
+            <div id="deluxeParkering">
 
-                <a href="https://faisaal99.github.io/Garage1/" target="_blank">
+                <a class="aLinks" href="https://faisaal99.github.io/Garage1/" target="_blank">
                     <div class="upper">
                         Deluxe Parkering
                     </div>
@@ -68,7 +135,7 @@
 
             <div class="App_UI_UX">
 
-                <a href="https://faisaal99.github.io/APP-UI-UX/" target="_blank">
+                <a class="aLinks" href="https://faisaal99.github.io/APP-UI-UX/" target="_blank">
                     <div class="upper">
                         App Design - UI/UX <span class="underConstr">// Under Construction</span>
                     </div>

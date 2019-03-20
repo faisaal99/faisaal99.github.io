@@ -1,0 +1,332 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*****************************************************************************************************************************/
+
+html
+{
+	overflow: hidden;
+}
+
+body
+{
+	/*background-image: url(images/backgroundImage.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;*/
+}
+
+#bg {
+	position: absolute;
+	background-image: url(images/backgroundImage.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+/*************************************************************************************/
+
+#leftMenu { /* Svarta baren till vänster */
+	position: relative;
+	float: left;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100vh;
+	/*width: 350px;*/
+	width: 350px;
+}
+
+#title /* My name showing up */
+{
+	display:  inline;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 50px;
+	opacity: 1;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 12px;
+}
+
+#pp /* Profile Picture */
+{
+	border-radius: 50%;
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	user-select: none;
+	pointer-events: none;
+	left: 50%;
+	transform: translate(-50%);
+	top: 94px;
+}
+
+#quickInfo /* Quick information about me */
+{
+	line-height: 150%;
+	/*border: 1px solid red;*/
+	text-align: center;
+	font-family: 'Inconsolata', monospace; 
+	color: white;
+	width: 90%;
+	position: absolute;
+	left: 50%;
+	top: 230px;
+	transform: translate(-50%);
+}
+
+#quickInfo .bold /* f.in. name, age, occupation */
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.randomLinks
+{
+	/*border: 1px solid red;*/
+	position: absolute;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	user-select: none;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%);
+	overflow: hidden;
+}
+
+.randomLinks #github
+{
+	height: 40px;
+	width: 40px;
+	padding: 5px;
+	border-radius: 10px;
+	/*border: 1px solid red;*/
+	
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	
+	background-color: rgba(255, 255, 255, 0.3);
+	position: absolute;
+	transition: 0.15s;
+}
+
+.randomLinks #github:hover
+{
+	background-color: rgba(255, 255, 255, 1);
+	transition: 0.2s;
+}
+
+/*******************************************************************************/
+
+.rightSide
+{
+	left: 350px;
+	right: 0;
+	overflow: hidden;
+	position: absolute;
+	color: white;
+	height: 100vh;
+	width: auto;
+	/*background-color: rgba(0, 0, 150, 0.5); */
+}
+
+#themeButton {
+	user-select: none;
+	text-align: center;
+	position: absolute;
+	/*transform: translate(-100%, 0);*/
+	/*background-color: red;*/
+	right: 12px;
+	top: 12px;
+	height: 29px;
+	width: 78px; /* 5% on both before */
+}
+
+#themeButton:focus{
+	outline: none;
+}
+
+#themePic{
+	width: 78px;
+	height: 29px;
+	/*
+	height: 30%;
+	width: 30%;
+	*/
+}
+
+#projects /* Says "projects" at the top */
+{
+	color: white;
+	font-family: 'Inconsolata', monospace; 
+	font-weight: bold;
+	user-select: none;
+	padding: 12px;
+	border-radius: 10px;    
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+
+	top: 12px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+/**************************************************************************/
+.underConstr /* Every  DONT MAKE AN ID*/
+{
+	color: red;
+}
+/*********************************/
+#deluxeParkering
+{
+	color: white;
+	text-align: left;
+	position: absolute;
+	top: 90px;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%);
+	text-decoration: none;
+	overflow: hidden;
+
+	font-family: 'Nunito', sans-serif;
+ 
+}
+
+.upper
+{
+	user-select: none;
+	background-color: rgba(0,0,0,0.65);
+	padding: 12px;
+	border-radius: 10px 10px 0 0;
+
+	transition: 0.15s;
+}
+
+#deluxeParkering .upper:hover
+{
+	background-color: rgba(0,0,0,0.8);
+	transition: 0.2s;
+}
+
+#deluxeParkering .lower
+{
+	background-color: rgba(0,0,0,0.5);
+	padding: 12px;
+	border-radius: 0 0 10px 10px;
+}
+
+#deluxeParkering a
+{
+	color: white;
+	text-decoration: none;
+}
+#deluxeParkering a:hover
+{
+	text-decoration: underline;
+}
+
+/************************************************************************/
+
+.App_UI_UX
+{
+	color: white;
+	text-align: left;
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%);
+	text-decoration: none;
+	overflow: hidden;
+
+	font-family: 'Nunito', sans-serif;
+ 
+}
+
+.App_UI_UX .upper
+{
+	user-select: none;
+	background-color: rgba(0,0,0,0.65);
+	padding: 12px;
+	border-radius: 10px 10px 0 0;
+
+	transition: 0.15s;
+}
+
+.App_UI_UX .upper:hover
+{
+	background-color: rgba(0,0,0,0.8);
+	transition: 0.2s;
+}
+
+.App_UI_UX .lower
+{
+	background-color: rgba(0,0,0,0.5);
+	padding: 12px;
+	border-radius: 0 0 10px 10px;
+}
+
+.App_UI_UX a
+{
+	color: white;
+	text-decoration: none;
+}
+.App_UI_UX a:hover
+{
+	text-decoration: underline;
+}
+
+
+
+
+
+
